@@ -1,0 +1,45 @@
+services:
+  - type: web
+    name: glowlogics-portfolio
+    runtime: docker
+    plan: free
+    autoDeployTrigger: commit
+    healthCheckPath: /
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: glowlogics-portfolio-db
+          property: connectionString
+      - key: DB_USER
+        fromDatabase:
+          name: glowlogics-portfolio-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: glowlogics-portfolio-db
+          property: password
+      - key: H2_CONSOLE_ENABLED
+        value: "false"
+      - key: THYMELEAF_CACHE
+        value: "true"
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: CONTACT_NOTIFICATION_TO
+        sync: false
+      - key: MAIL_HOST
+        sync: false
+      - key: MAIL_PORT
+        sync: false
+      - key: MAIL_USERNAME
+        sync: false
+      - key: MAIL_PASSWORD
+        sync: false
+
+databases:
+  - name: glowlogics-portfolio-db
+    plan: free
+    databaseName: portfolio_db
+    user: portfolio_user

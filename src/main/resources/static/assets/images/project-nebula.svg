@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f97316"/><stop offset="1" stop-color="#fb7185"/></linearGradient></defs>
+  <rect width="1200" height="720" fill="#1a1121"/>
+  <rect x="140" y="120" width="920" height="480" rx="38" fill="url(#g)" opacity="0.3"/>
+  <rect x="220" y="210" width="300" height="300" rx="24" fill="#fff7ed" opacity="0.8"/>
+  <rect x="570" y="210" width="430" height="64" rx="18" fill="#ffedd5"/>
+  <rect x="570" y="304" width="350" height="48" rx="14" fill="#ffedd5" opacity="0.9"/>
+  <rect x="570" y="380" width="390" height="48" rx="14" fill="#ffedd5" opacity="0.85"/>
+  <text x="130" y="662" fill="#ffe9db" font-family="Poppins, sans-serif" font-size="54">Nebula Notes</text>
+</svg>

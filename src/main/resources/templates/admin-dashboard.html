@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Portfolio</title>
+    <link rel="icon" href="/assets/images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/variables.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <script defer src="/assets/js/api.js"></script>
+    <script defer src="/assets/js/admin.js"></script>
+</head>
+<body class="admin-shell" data-theme="dark">
+<header class="admin-header">
+    <div class="container admin-header-inner">
+        <h1>Portfolio Admin Panel</h1>
+        <form action="/admin/logout" method="post">
+            <button class="btn btn-soft btn-sm" type="submit">Logout</button>
+        </form>
+    </div>
+</header>
+
+<main class="container admin-main">
+    <section class="admin-section">
+        <h2>Projects</h2>
+        <p class="admin-helper">Add or update project cards shown on the portfolio homepage.</p>
+        <form id="project-form" class="admin-form">
+            <input type="hidden" id="project-id">
+            <div class="admin-grid">
+                <div class="input-group">
+                    <label for="project-title">Title</label>
+                    <input id="project-title" type="text" required>
+                </div>
+                <div class="input-group">
+                    <label for="project-category">Category</label>
+                    <input id="project-category" type="text" required>
+                </div>
+                <div class="input-group">
+                    <label for="project-image">Image URL</label>
+                    <input id="project-image" type="url" placeholder="/assets/images/project-custom.svg">
+                </div>
+                <div class="input-group">
+                    <label for="project-live">Live Demo URL</label>
+                    <input id="project-live" type="url">
+                </div>
+                <div class="input-group">
+                    <label for="project-github">GitHub URL</label>
+                    <input id="project-github" type="url">
+                </div>
+                <div class="input-group">
+                    <label for="project-stack">Tech stack (comma separated)</label>
+                    <input id="project-stack" type="text" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="project-description">Description</label>
+                <textarea id="project-description" rows="3" required></textarea>
+            </div>
+            <label class="inline-check">
+                <input id="project-featured" type="checkbox">
+                Featured project
+            </label>
+            <div class="admin-actions">
+                <button class="btn btn-solid" type="submit">Save project</button>
+                <button class="btn btn-outline" type="button" id="project-reset">Reset</button>
+            </div>
+            <p id="project-feedback" class="form-feedback" role="status"></p>
+        </form>
+
+        <div class="table-wrap">
+            <table class="admin-table" id="project-table">
+                <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Featured</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="admin-section">
+        <h2>Blogs</h2>
+        <p class="admin-helper">Publish and maintain long-form content with markdown support.</p>
+        <form id="blog-form" class="admin-form">
+            <input type="hidden" id="blog-id">
+            <div class="admin-grid">
+                <div class="input-group">
+                    <label for="blog-title">Title</label>
+                    <input id="blog-title" type="text" required>
+                </div>
+                <div class="input-group">
+                    <label for="blog-image">Cover Image URL</label>
+                    <input id="blog-image" type="url" placeholder="/assets/images/blog-custom.svg">
+                </div>
+                <div class="input-group">
+                    <label for="blog-tags">Tags (comma separated)</label>
+                    <input id="blog-tags" type="text" required>
+                </div>
+                <label class="inline-check">
+                    <input id="blog-published" type="checkbox" checked>
+                    Published
+                </label>
+            </div>
+            <div class="input-group">
+                <label for="blog-summary">Summary</label>
+                <textarea id="blog-summary" rows="2" required></textarea>
+            </div>
+            <div class="input-group">
+                <label for="blog-content">Markdown content</label>
+                <textarea id="blog-content" rows="8" required></textarea>
+            </div>
+            <div class="admin-actions">
+                <button class="btn btn-solid" type="submit">Save blog</button>
+                <button class="btn btn-outline" type="button" id="blog-reset">Reset</button>
+            </div>
+            <p id="blog-feedback" class="form-feedback" role="status"></p>
+        </form>
+
+        <div class="table-wrap">
+            <table class="admin-table" id="blog-table">
+                <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Status</th>
+                    <th>Updated</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+</body>
+</html>

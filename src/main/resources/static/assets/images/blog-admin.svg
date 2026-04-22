@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#111827"/>
+  <rect x="150" y="120" width="900" height="480" rx="36" fill="#0f766e" opacity="0.28"/>
+  <rect x="220" y="190" width="760" height="70" rx="18" fill="#d1fae5"/>
+  <rect x="220" y="300" width="320" height="230" rx="18" fill="#ecfdf5" opacity="0.92"/>
+  <rect x="580" y="300" width="400" height="52" rx="14" fill="#a7f3d0"/>
+  <rect x="580" y="386" width="320" height="52" rx="14" fill="#a7f3d0" opacity="0.92"/>
+  <rect x="580" y="470" width="360" height="52" rx="14" fill="#a7f3d0" opacity="0.86"/>
+  <text x="130" y="662" fill="#eafff7" font-family="Poppins, sans-serif" font-size="52">Crafting Better Admin Panels</text>
+</svg>

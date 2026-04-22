@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read in-depth engineering and product posts.">
+    <meta property="og:title" content="Glowlogics Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="/assets/images/logo.png">
+    <title>Blog | Glowlogics Portfolio</title>
+
+    <link rel="icon" href="/assets/images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/variables.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+    <script defer src="/assets/js/api.js"></script>
+    <script defer src="/assets/js/theme.js"></script>
+    <script defer src="/assets/js/blog.js"></script>
+</head>
+<body data-theme="light">
+<header class="site-header compact" id="site-header">
+    <nav class="nav container" aria-label="Blog navigation">
+        <a href="/" class="brand">Glow<span>Portfolio</span></a>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode"></button>
+            <a class="btn btn-soft btn-sm" href="/">Back Home</a>
+        </div>
+    </nav>
+</header>
+
+<main class="blog-page-main">
+    <article class="blog-article container" id="blog-article" aria-live="polite">
+        <div class="article-skeleton" id="blog-skeleton"></div>
+    </article>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <p>© <span id="year"></span> Glowlogics Portfolio</p>
+        <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/index.html#blog">Blog list</a>
+            <a href="/index.html#contact">Contact</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

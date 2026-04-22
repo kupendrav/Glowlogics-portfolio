@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="700" rx="80" fill="#0f1726"/>
+  <circle cx="350" cy="250" r="130" fill="url(#bg)" opacity="0.95"/>
+  <rect x="170" y="390" width="360" height="220" rx="110" fill="#152235"/>
+  <circle cx="300" cy="235" r="16" fill="#f3f7f7"/>
+  <circle cx="400" cy="235" r="16" fill="#f3f7f7"/>
+  <path d="M286 307C307 334 393 334 414 307" stroke="#f3f7f7" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <text x="350" y="640" fill="#e6eef9" font-family="Poppins, sans-serif" font-size="34" text-anchor="middle">Glowlogics</text>
+</svg>

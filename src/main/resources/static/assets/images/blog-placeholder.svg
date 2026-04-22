@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#172538"/>
+  <rect x="140" y="140" width="920" height="440" rx="36" fill="#233852"/>
+  <text x="600" y="380" fill="#93a9c2" font-family="Poppins, sans-serif" font-size="56" text-anchor="middle">Blog Cover</text>
+</svg>

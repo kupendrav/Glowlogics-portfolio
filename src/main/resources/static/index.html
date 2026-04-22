@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Portfolio of a full-stack Java developer building premium web experiences with Spring Boot and modern UI engineering.">
+    <meta name="keywords" content="Java, Spring Boot, Full Stack Developer, Portfolio, UI UX, REST API">
+    <meta property="og:title" content="Glowlogics Portfolio">
+    <meta property="og:description" content="Modern portfolio built with Spring Boot and handcrafted frontend animations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost:8080/">
+    <meta property="og:image" content="/assets/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#0f766e">
+    <title>Glowlogics | Full-Stack Java Portfolio</title>
+
+    <link rel="icon" href="/assets/images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/variables.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+
+    <script defer src="/assets/js/api.js"></script>
+    <script defer src="/assets/js/theme.js"></script>
+    <script defer src="/assets/js/ui.js"></script>
+    <script defer src="/assets/js/main.js"></script>
+</head>
+<body data-theme="light">
+<div id="page-loader" class="page-loader" aria-hidden="true">
+    <div class="loader-spinner"></div>
+</div>
+
+<div class="ambient-bg" aria-hidden="true">
+    <canvas id="particle-canvas"></canvas>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+</div>
+
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<aside class="social-sidebar" aria-label="Social links">
+    <a href="https://github.com/kupendrav" target="_blank" rel="noopener" aria-label="GitHub profile">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.69-.21.69-.48 0-.24-.01-1.03-.01-1.87-2.53.47-3.19-.62-3.4-1.19-.12-.3-.64-1.2-1.09-1.44-.37-.2-.9-.69-.01-.7.84-.01 1.44.77 1.64 1.09.96 1.62 2.5 1.16 3.12.88.09-.7.37-1.16.67-1.43-2.25-.26-4.61-1.13-4.61-5a3.9 3.9 0 0 1 1.03-2.7 3.62 3.62 0 0 1 .1-2.66s.84-.27 2.75 1.03a9.3 9.3 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.38.97.14 2.1.07 2.66a3.87 3.87 0 0 1 1.03 2.7c0 3.88-2.37 4.74-4.63 4.99.38.32.72.94.72 1.91 0 1.38-.01 2.49-.01 2.83 0 .27.18.59.69.49A10 10 0 0 0 12 2z"/>
+        </svg>
+    </a>
+    <a href="https://www.linkedin.com/in/kupendrav99/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.94 8.5a2.18 2.18 0 1 1 0-4.36 2.18 2.18 0 0 1 0 4.36zM5.06 9.97h3.77V20H5.06V9.97zM10.9 9.97h3.61v1.37h.05c.5-.95 1.73-1.96 3.56-1.96 3.81 0 4.52 2.51 4.52 5.77V20h-3.76v-4.3c0-1.03-.02-2.35-1.43-2.35-1.43 0-1.64 1.12-1.64 2.28V20H10.9V9.97z"/>
+        </svg>
+    </a>
+    <a href="https://x.com/kupendrav99" target="_blank" rel="noopener" aria-label="X profile">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.24 2H21l-6.56 7.5L22.2 22h-6.08l-4.77-6.23L5.9 22H3.14l7.01-8.02L2 2h6.24l4.31 5.7L18.24 2zm-1.07 18.18h1.53L7.41 3.73H5.77l11.4 16.45z"/>
+        </svg>
+    </a>
+    <a href="https://kupendra.netlify.app/" target="_blank" rel="noopener" aria-label="Personal website">
+        <svg viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.8">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M3 12h18M12 3c2.8 2.6 2.8 15.4 0 18M12 3c-2.8 2.6-2.8 15.4 0 18"></path>
+        </svg>
+    </a>
+</aside>
+
+<header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+        <a href="#home" class="brand">Glow<span>Portfolio</span></a>
+
+        <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home" data-nav="home">Home</a></li>
+            <li><a href="#about" data-nav="about">About</a></li>
+            <li><a href="#projects" data-nav="projects">Projects</a></li>
+            <li><a href="#blog" data-nav="blog">Blog</a></li>
+            <li><a href="#contact" data-nav="contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="theme-swatches" role="group" aria-label="Accent color themes">
+                <button class="swatch" data-accent="#0f766e" data-rgb="15,118,110" aria-label="Teal theme"></button>
+                <button class="swatch" data-accent="#d97706" data-rgb="217,119,6" aria-label="Amber theme"></button>
+                <button class="swatch" data-accent="#2563eb" data-rgb="37,99,235" aria-label="Blue theme"></button>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode"></button>
+            <a class="btn btn-soft btn-sm" href="/admin/login">Admin</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="section hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-content reveal">
+                <p class="eyebrow">Senior Full-Stack Java Developer</p>
+                <h1>
+                    Building refined digital products with
+                    <span class="typewriter-line"><span id="typewriter" class="typewriter" aria-live="polite"></span></span>
+                </h1>
+                <p class="hero-intro">
+                    I design and deliver scalable Spring Boot platforms with polished interfaces, meaningful motion,
+                    and production-first engineering practices.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-solid">Explore Projects</a>
+                    <a href="#contact" class="btn btn-outline">Book a Collaboration</a>
+                </div>
+                <ul class="hero-stats" aria-label="Quick statistics">
+                    <li><strong>7+</strong><span>Years Shipping</span></li>
+                    <li><strong>40+</strong><span>Projects Delivered</span></li>
+                    <li><strong>15+</strong><span>Teams Mentored</span></li>
+                </ul>
+            </div>
+
+            <div class="hero-visual reveal" data-reveal-delay="120">
+                <div class="profile-card">
+                    <img src="/assets/images/logo.jpg" alt="Kupendra profile" width="460" height="460" fetchpriority="high">
+                    <div class="profile-badge">Open to remote opportunities</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-head reveal">
+                <p class="eyebrow">About</p>
+                <h2>Engineering systems with craftsmanship and clarity</h2>
+            </div>
+
+            <div class="about-grid">
+                <article class="glass-card reveal">
+                    <h3>Who I am</h3>
+                    <p>
+                        I specialize in Java and Spring ecosystems, translating complex business ideas into dependable
+                        platforms with intuitive user experiences. My work balances architecture, implementation speed,
+                        and long-term maintainability.
+                    </p>
+                    <p>
+                        I collaborate closely with product and design teams, and I care deeply about accessibility,
+                        performance budgets, and code quality.
+                    </p>
+                </article>
+
+                <article class="glass-card reveal" data-reveal-delay="90">
+                    <h3>Education & growth</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span>2023 - Present</span>
+                            <h4>Senior Software Engineer</h4>
+                            <p>Leading architecture and UI modernization projects across product lines.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span>2020 - 2023</span>
+                            <h4>Full-Stack Java Engineer</h4>
+                            <p>Built high-throughput APIs and frontends for analytics and commerce systems.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span>2015 - 2019</span>
+                            <h4>B.Tech in Computer Science</h4>
+                            <p>Specialized in software systems, interaction design, and data engineering.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-head reveal">
+                <p class="eyebrow">Skills</p>
+                <h2>Hands-on capabilities across backend, frontend, and DevOps</h2>
+            </div>
+            <div class="skills-grid" id="skills-grid" aria-live="polite">
+                <div class="skill-skeleton"></div>
+                <div class="skill-skeleton"></div>
+                <div class="skill-skeleton"></div>
+                <div class="skill-skeleton"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-head reveal">
+                <p class="eyebrow">Projects</p>
+                <h2>Production-grade builds with measurable business impact</h2>
+            </div>
+
+            <div class="filter-row reveal" id="project-filters" role="tablist" aria-label="Filter projects by category">
+                <button class="filter-chip active" data-category="all" role="tab" aria-selected="true">All</button>
+            </div>
+
+            <div class="card-grid" id="projects-grid" aria-live="polite">
+                <div class="card-skeleton"></div>
+                <div class="card-skeleton"></div>
+                <div class="card-skeleton"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section blog" id="blog">
+        <div class="container">
+            <div class="section-head reveal">
+                <p class="eyebrow">Blog</p>
+                <h2>Thoughts on software architecture, DX, and product velocity</h2>
+            </div>
+
+            <div class="blog-controls reveal">
+                <label class="sr-only" for="blog-search">Search blogs</label>
+                <input id="blog-search" type="search" placeholder="Search posts by topic..." autocomplete="off">
+                <div class="filter-row" id="blog-tag-filters" aria-label="Filter blogs by tag"></div>
+            </div>
+
+            <div class="card-grid" id="blogs-grid" aria-live="polite">
+                <div class="card-skeleton"></div>
+                <div class="card-skeleton"></div>
+                <div class="card-skeleton"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="container contact-grid">
+            <div class="contact-copy reveal">
+                <p class="eyebrow">Contact</p>
+                <h2>Let us build something that users remember</h2>
+                <p>
+                    Share a product idea, a redesign brief, or a backend challenge. I will respond with a clear,
+                    actionable plan.
+                </p>
+            </div>
+
+            <form class="contact-form reveal" id="contact-form" novalidate>
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" required maxlength="120" placeholder="Your name">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required maxlength="180" placeholder="you@example.com">
+                </div>
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required minlength="10" maxlength="2000"
+                              placeholder="Tell me about your project goals..."></textarea>
+                </div>
+                <button class="btn btn-solid" type="submit" id="contact-submit">Send Message</button>
+                <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <p>© <span id="year"></span> Glowlogics Portfolio. Crafted with Spring Boot and vanilla JavaScript.</p>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

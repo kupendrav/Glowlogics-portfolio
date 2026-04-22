@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#0f172a"/>
+  <path d="M180 500C280 420 340 470 430 390C530 300 620 360 710 280C810 190 920 260 1020 180" fill="none" stroke="#38bdf8" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="430" cy="390" r="18" fill="#bae6fd"/>
+  <circle cx="710" cy="280" r="18" fill="#bae6fd"/>
+  <circle cx="1020" cy="180" r="18" fill="#bae6fd"/>
+  <text x="130" y="662" fill="#dbeafe" font-family="Poppins, sans-serif" font-size="52">SSR Blog Roadmap</text>
+</svg>

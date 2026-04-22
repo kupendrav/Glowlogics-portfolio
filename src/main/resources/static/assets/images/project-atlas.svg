@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#059669"/><stop offset="1" stop-color="#f59e0b"/></linearGradient></defs>
+  <rect width="1200" height="720" fill="#111827"/>
+  <rect x="130" y="160" width="940" height="400" rx="36" fill="url(#g)" opacity="0.25"/>
+  <rect x="210" y="230" width="220" height="250" rx="20" fill="#ecfeff" opacity="0.88"/>
+  <rect x="490" y="230" width="220" height="250" rx="20" fill="#ecfeff" opacity="0.92"/>
+  <rect x="770" y="230" width="220" height="250" rx="20" fill="#ecfeff" opacity="0.85"/>
+  <text x="130" y="662" fill="#f7f6ea" font-family="Poppins, sans-serif" font-size="54">Atlas Hiring Suite</text>
+</svg>
